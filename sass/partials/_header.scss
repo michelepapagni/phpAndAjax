@@ -1,0 +1,51 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: $basePadding $basePadding $basePadding/2;
+    border-bottom: 1px solid $googleGrey;
+    width: 100%;
+    z-index: 1;
+    background: white;
+    .header-top {
+        h1 {
+            display: inline-block;
+            margin-left: $baseMargin;
+            color: $googleGrey;
+            font-weight: $fontMedium;
+            font-size: 25px;
+        }
+    }
+    .header-bottom {
+        margin-top: $baseMargin;
+        width: 100%;
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                display: inline-block;
+                margin-right: $baseMargin;
+                font-size: 15px;
+                font-weight: $fontMedium;
+                a {
+                    color: $googleGrey;
+                    text-decoration: none;
+                }
+                &.active {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -11px;
+                        left: 0;
+                        background: $googleBlue;
+                        height: 4px;
+                        width: 100%;
+                    }
+                    a {
+                        color: $googleBlue;
+                    }
+                }
+            }
+        }
+    }
+}
