@@ -1,3 +1,5 @@
+<?php include 'data.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -37,18 +39,13 @@
 
         <div class="content">
             <div class="container">
-
+                <?php foreach ($faqs as $faq) { ?>
+                    <div class="faq">
+                        <h2><?php echo $faq['question']; ?></h2>
+                        <p><?php echo $faq['answer']; ?></p>
+                    </div>
+                <?php } ?>
             </div>
         </div>
-
-        <div class="templates">
-            <div class="faq-container">
-                <div class="faq">
-                    <h2></h2>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <script src="js/app.js" charset="utf-8"></script>
     </body>
 </html>

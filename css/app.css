@@ -15,6 +15,10 @@
   max-width: 1000px;
 }
 
+.templates {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
